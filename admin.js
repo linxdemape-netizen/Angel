@@ -52,7 +52,7 @@ function pForm(id) {
     <span class="lbl">Description</span><textarea id="f_desc" rows="3">${esc(p.description)}</textarea>
     <span class="lbl">Material</span><input id="f_mat" value="${esc(p.material)}" placeholder="Milk cotton yarn">
     <span class="lbl">Size</span><input id="f_size" value="${esc(p.size)}" placeholder="20 cm tall">
-    <span class="lbl">Colors (separate with commas)</span><input id="f_colors" value="${esc((p.colors || []).join(', '))}" placeholder="Blush, Sage, Butter">
+    <span class="lbl">Options (separate with commas)</span><input id="f_colors" value="${esc((p.colors || []).join(', '))}" placeholder="Blush, Sage, Butter">
     <span class="lbl">Lead time</span><input id="f_lead" value="${esc(p.lead_time)}" placeholder="3 to 5 days">
     <div style="margin:12px 0">${ck('f_mto', 'Made to order', p.made_to_order)}${ck('f_new', 'New', p.is_new)}${ck('f_best', 'Best seller', p.is_best)}${ck('f_sold', 'Sold out', p.sold_out)}${ck('f_hid', 'Hidden', p.hidden)}</div>
     <span class="lbl">Photos (the first one is the cover)</span><div class="ph" id="phs"></div>
