@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AXKN07 crochet</title>
+<meta name="description" content="Handmade crochet, made with love stitch by stitch.">
+<meta name="theme-color" content="#7A4045">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Caveat:wght@500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap top">
+  <a class="logo" href="#"><b>AXKN07</b><i>crochet</i></a>
+  <div class="icons">
+    <button id="bSearch" aria-label="Search"><i class="ti ti-search"></i></button>
+    <button id="bCart" aria-label="Open basket"><i class="ti ti-basket"></i><span class="badge" id="cnt" hidden>0</span></button>
+  </div>
+</header>
+<main class="wrap">
+  <div class="closed" id="closed" hidden></div>
+  <section class="hero">
+    <small id="banner">new drop</small>
+    <h1>Made with love, stitch by stitch</h1>
+    <a class="btn" href="#shop">Shop now</a>
+  </section>
+  <div class="pills" id="cats"></div>
+  <input id="q" type="search" placeholder="Search crochet" aria-label="Search products">
+  <section id="shop"><div class="grid" id="grid"></div></section>
+  <section id="reviews" hidden><h2>Happy customers</h2><div class="revs" id="revs"></div></section>
+  <section id="faq"><h2>Good to know</h2><div class="info" id="info"></div></section>
+  <footer>made with love, stitch by stitch</footer>
+</main>
+<nav class="nav">
+  <a href="#" class="on"><i class="ti ti-home"></i>Home</a>
+  <a href="#shop"><i class="ti ti-layout-grid"></i>Shop</a>
+  <button id="nCart"><i class="ti ti-basket"></i>Basket</button>
+  <a href="#faq"><i class="ti ti-help-circle"></i>FAQ</a>
+</nav>
+<div class="ov" id="ov" hidden><div class="panel" id="panel" role="dialog" aria-modal="true"></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

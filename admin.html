@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AXKN07 admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Caveat:wght@500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap top">
+  <a class="logo" href="admin.html"><b>AXKN07</b><i>admin</i></a>
+  <div class="icons"><a class="btn soft sm" href="index.html" target="_blank">View shop</a><button class="btn soft sm" id="out" hidden>Log out</button></div>
+</header>
+<main class="wrap" id="main">
+  <div class="a-card" id="login" style="max-width:380px;margin:40px auto">
+    <h2 style="margin-top:4px">Welcome back</h2>
+    <span class="lbl">Email</span><input id="em" type="email" autocomplete="username">
+    <span class="lbl">Password</span><input id="pw" type="password" autocomplete="current-password">
+    <p id="lerr" class="meta" style="color:#a33a3a"></p>
+    <button class="btn" id="go" style="width:100%">Log in</button>
+  </div>
+  <div id="app" hidden>
+    <div class="a-tabs" id="tabs">
+      <button class="pill on" data-tab="products">Products</button><button class="pill" data-tab="orders">Orders</button>
+      <button class="pill" data-tab="reviews">Reviews</button><button class="pill" data-tab="settings">Shop settings</button>
+    </div>
+    <div id="view"></div>
+  </div>
+</main>
+<div class="ov" id="ov" hidden><div class="panel" id="panel"></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
