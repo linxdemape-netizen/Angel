@@ -80,7 +80,7 @@ function openProduct(id) {
     <div class="row" style="margin-top:12px"><h2 style="margin:0">${esc(p.name)}</h2><span class="pr" style="font-size:22px">${peso(p.price)}</span></div>
     <div class="meta">${p.made_to_order ? 'Made to order' : 'Ready stock'}${p.lead_time ? ' · ' + esc(p.lead_time) : ''}${p.material ? ' · ' + esc(p.material) : ''}${p.size ? ' · ' + esc(p.size) : ''}</div>
     <p style="white-space:pre-line">${esc(p.description || '')}</p>
-    ${(p.colors || []).length ? `<span class="lbl">Color</span><div class="chips" id="chips">${p.colors.map((c, i) => `<button class="chip ${i ? '' : 'on'}" data-color="${esc(c)}">${esc(c)}</button>`).join('')}</div>` : ''}
+    ${(p.colors || []).length ? `<span class="lbl">Options</span><div class="chips" id="chips">${p.colors.map((c, i) => `<button class="chip ${i ? '' : 'on'}" data-color="${esc(c)}">${esc(c)}</button>`).join('')}</div>` : ''}
     <span class="lbl">Custom request (optional)</span><input id="pnote" placeholder="Name on item, size, special color" maxlength="120">
     <div class="row" style="margin-top:14px"><div class="qty"><button data-q="-1" aria-label="Less">−</button><b id="qv">1</b><button data-q="1" aria-label="More">+</button></div>
     ${p.sold_out || isClosed() ? '<span class="btn soft">Not available right now</span>' : '<button class="btn" data-addcur>Add to basket</button>'}</div>
